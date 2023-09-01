@@ -25,7 +25,6 @@ async def _wait_sock_read(*args):
 
 
 async def _wait_sock_write(*args):
-    print("SOcket")
     return await _to_kernel(_WAIT_SOCK_WRITE, *args)
 
 
