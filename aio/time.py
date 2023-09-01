@@ -10,7 +10,7 @@ from .requests import _SLEEP
 from .kreq import _to_kernel
 
 
-async def sleep(secnds: int) -> None:
+async def sleep(secnds: float) -> None:
     return await _to_kernel(_SLEEP, secnds)
 
 
