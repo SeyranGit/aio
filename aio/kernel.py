@@ -93,7 +93,7 @@ class Kernel(object):
             while not loop.is_closed():
                 tasks: list[Task] = loop.get_tasks()
                 try:
-                    result = _tasks_handler(self, tasks)
+                    _tasks_handler(self, tasks)
                 except TerminatedEventLoop as exc:
                     return exc.value
 
